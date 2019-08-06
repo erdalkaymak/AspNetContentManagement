@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AllPagesSiteMaster.Master.cs" Inherits="ContentManagementSystem.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+       
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="MyContent/MyCss.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        function alertMessage() {
+            var Title = $('#Title').val();           
+            alert(Title + " record added succesfully!");
+        }
+
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %>Content Management </title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="Author">
+
+        <div>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                   
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">                        
+                        <li style="float:right;margin-left:780px;"><div style="margin-top:15px;">
+                            <%if (adminmi){ %>
+                                    
+                                <span  style="color:white;margin-left:2px;"><a onclick="return confirm('Are you sure to Log out?')" style="color:white;"  href="/Logout">Log out</a></span>
+                                 <% }%>
+                            <%else{%>
+                                 <a  href="/UpdateAuthorInformation?act=update&id=<%:Authorid%>"><img style="margin-bottom:10px;" height="25" width="25" title="Update Information"  src="Images/<%:author.Picture %>" /></a><span style="color:white;margin-left:8px;"><a onclick="return confirm('Are you sure to Log out?')" style="color:white" href="/Logout">Log out</a></span></div></li> 
+                              <%} %>      
+                            
+                      
+                        <%if(adminmi){%>
+                         <li><a  href="/AuthorsPage">AuthorsPage</a></li>
+                         <li><a  href="/CategoryPage">Add Category</a></li>
+                         <li style="margin-top:-35px;"><a   href="/ReadArticlesPage">Read Article</a></li>
+                                <% }%>
+                       <%else{ %> 
+                         <li><a  href="/AddArticle">Add Article</a></li>
+                         <li><a  href="/ReadArticlesPage">Read Article</a></li>
+
+                       <% }%> 
+                      </ul>                      
+                </div>
+            </div>
+        </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">            
+           </asp:ContentPlaceHolder>
+            <footer  class="Footers">
+                <p>&copy; <%: DateTime.Now.Year %> EKCmPlus All Rights Reserved </p>
+            </footer>
+        </div>  
+</body>
+</html>

@@ -1,0 +1,115 @@
+﻿.Author {
+    background-color: #808080;
+
+}
+
+.AllForms {
+    width: 20%;
+    margin: auto;
+    text-align: left;
+    border: 5px solid #ffffff;
+    padding: 30px;
+    background-color: #ffffff
+}
+
+.MyformInAllForms {
+    margin-bottom:30px;
+}
+
+.inputForm {
+    border-left-color: forestgreen;
+    border-left-width: 3px;
+    border-color:black;
+}
+.header {
+    margin-top:70px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin:auto;
+}
+
+    table td, table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+        background-color: #ddd;
+    }
+
+    table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: slategrey ;
+    }
+.Title {
+    padding: 10px;
+    color: #4800ff;
+    font-size: large;
+    margin-bottom: 20px;
+}
+.CatType {
+    float: right;
+    margin-right: 30px;
+    color: darkgreen;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+.ArticleBody {
+    word-wrap: break-word;
+    color: black
+}
+.ArticleDate {
+    float: right;
+    margin-right: 30px;
+}
+.AuthorNameSurname {
+    float: left;
+    color: crimson;
+    margin-right: 30px;
+}
+.ArticleMainBody {
+    margin: auto;
+    width: 50%;
+    background-color:sandybrown;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.Required {
+    color: #808080;
+}
+.Footers {
+    background-color: #222222;
+    text-align: center;
+    color: white;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    padding: 15px;
+}
+
+.ArticleBodyTextArea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
