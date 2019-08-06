@@ -10,7 +10,7 @@
     <link href="MyContent/MyCss.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script>
-       
+       //sbfdsd
     </script>
 </head>
 <body class="Author">
